@@ -1,0 +1,110 @@
+// create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Inventaris logistik",
+    "email": "Inventarislogistik@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+//Get single User
+GET http://localhost:5000/users/d5131847-a605-441c-9615-38bc4b0a1170
+
+###
+// Update a user
+PATCH http://localhost:5000/users/d5131847-a605-441c-9615-38bc4b0a1170
+Content-Type: application/json
+
+{
+    "name": "logistik Updated",
+    "email": "logistik@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin"
+}
+###
+// delete a user
+DELETE  http://localhost:5000/users/3172a5e7-7a57-470c-9ea0-caa45a29affa
+
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "Inventarislogistik@gmail.com",
+    "password": "123456" 
+    
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "jhon@gmail.com",
+    "password": "123456" 
+    
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout 
+
+###
+// Get All Products
+GET http://localhost:5000/products
+###
+// Get Single Product
+GET http://localhost:5000/products/dd84104a-97ae-403e-baad-2aae8fbd4a45
+
+
+###
+// POST Data Product
+POST http://localhost:5000/products 
+Content-Type: application/json
+
+{    
+    "kode_barang": "1020020001",
+    "tanggal_masuk_barang": "21-12-2023",
+    "nama_barang": "fraktur",
+    "satuan": "buah",
+    "terima": "3000",
+    "keluar": "23090",
+    "so_akhir": "23000",
+    "saldo_awal": "300",
+    "penerima": "124,999,00",
+    "pengeluaran": "3660",
+    "harga_perpics":2000000,
+     "jumlah": 100,
+    "tanggal_keluar_barang":"22-12-2023"
+    
+
+    
+}
+
+###              
+//Update Data Product
+PATCH  http://localhost:5000/products/77e7ca76-be20-440f-b25a-394179226830
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 974
+    
+}
+
+###
+
+DELETE http://localhost:5000/products/adb3d8ed-1586-4a7f-9f9a-906ca75a3356
